@@ -1,0 +1,102 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"                    
+                    xmlns:local="clr-namespace:PersonnalLibrary.Components">
+    
+    <!-- Custom description style -->
+    
+    <!-- Style of a tile container -->
+    <Style TargetType="{x:Type local:Tile}">
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="BorderBrush" Value="Gray" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:Tile}">
+                    <Grid x:Name="PART_GlobalGridContainer"  Width="{TemplateBinding Width}" Height="{TemplateBinding Height}">
+                        <Grid.RenderTransformOrigin>0.5, 0.5</Grid.RenderTransformOrigin>
+                        <Grid.RenderTransform>
+                            <ScaleTransform x:Name="scaleTransform" />
+                        </Grid.RenderTransform>
+                        <!-- Define the visual state -->
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup Name="CommonStates">
+                                <VisualState Name="Normal" />
+                                <VisualState Name="Clicked">
+                                    <Storyboard>
+                                        <DoubleAnimation 
+                                            Storyboard.TargetName="scaleTransform" 
+                                            Storyboard.TargetProperty="ScaleX"
+                                            Duration="0:0:0.3"
+                                            To="0.98">
+                                            <DoubleAnimation.EasingFunction>
+                                                <CubicEase EasingMode="EaseOut" />
+                                            </DoubleAnimation.EasingFunction>
+                                        </DoubleAnimation>
+
+                                        <DoubleAnimation
+                                            Storyboard.TargetName="scaleTransform"
+                                            Storyboard.TargetProperty="ScaleY"
+                                            Duration="0:0:0.3"
+                                            To="0.98">
+                                            <DoubleAnimation.EasingFunction>
+                                                <CubicEase EasingMode="EaseOut" />
+                                            </DoubleAnimation.EasingFunction>
+                                        </DoubleAnimation>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <!-- Border display when the mouse goes hover the tile-->
+                        <Border Canvas.ZIndex="2" x:Name="PART_BorderDisplayedOnHover" Visibility="Collapsed" BorderBrush="#9E1E07" Opacity="0.5" BorderThickness="3" />
+                        <!-- Border displayed when the tile element is selected -->
+                        <Border Grid.ZIndex="3" x:Name="PART_BorderDisplayedWhenSelected" BorderThickness="3" BorderBrush="#9E1E07" Visibility="Collapsed">
+                            <Grid>
+                                <Path Data="M0,0 L20,0 L20,20 z" Fill="#9E1E07" HorizontalAlignment="Right" VerticalAlignment="Top"></Path>
+                                <Path HorizontalAlignment="Right" VerticalAlignment="Top" Width="10" Height="10" x:Name="CheckMark" Data="M657.002,363.3096L662.046,368.3546L668.787,357.6116" StrokeStartLineCap="Flat" Stretch="Fill" StrokeEndLineCap="Flat" Stroke="White" StrokeThickness="2" StrokeMiterLimit="10" StrokeLineJoin="Miter" />
+                            </Grid>
+                        </Border>
+                        <!-- Default border -->
+                        <Border BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" x:Name="PART_DefaultBorder" Grid.ZIndex="2" />
+                        <Grid x:Name="PART_GlobalContainer" Grid.ZIndex="1">
+                            <ItemsControl ItemsSource="{TemplateBinding TileItems}" x:Name="PART_TilesItemsControl" Grid.ZIndex="1"  Margin="1">
+                                <ItemsControl.Template>
+                                    <ControlTemplate>
+                                        <ItemsPresenter x:Name="PART_TilesPresenter"/>
+                                    </ControlTemplate>
+                                </ItemsControl.Template>
+                                <ItemsControl.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <StackPanel x:Name="PART_TilesContainer" />
+                                    </ItemsPanelTemplate>
+                                </ItemsControl.ItemsPanel>
+                            </ItemsControl>
+                        </Grid>
+                        <!-- Display a textblock at the right bottom of the tile. -->
+                        <TextBlock  Grid.ZIndex="2"
+                                    VerticalAlignment="Bottom"
+                                    Margin="5"
+                                    Text="{TemplateBinding TileDescription}" 
+                                    Foreground="{TemplateBinding Foreground}" 
+                                    FontSize="{TemplateBinding FontSize}"
+                                    FontFamily="{TemplateBinding FontFamily}" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="PART_BorderDisplayedOnHover" Property="Visibility" Value="Visible" />
+                            <Setter TargetName="PART_DefaultBorder" Property="Visibility" Value="Collapsed" />
+                            <Setter TargetName="PART_BorderDisplayedWhenSelected" Property="Visibility" Value="Collapsed" />
+                        </Trigger>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter TargetName="PART_BorderDisplayedWhenSelected" Property="Visibility" Value="Visible"/>
+                            <Setter TargetName="PART_DefaultBorder" Property="Visibility" Value="Collapsed" />
+                            <Setter TargetName="PART_BorderDisplayedOnHover" Property="Visibility" Value="Collapsed" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="PART_GlobalGridContainer" Property="Opacity" Value="0.4" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter> 
+    </Style>
+    
+</ResourceDictionary>

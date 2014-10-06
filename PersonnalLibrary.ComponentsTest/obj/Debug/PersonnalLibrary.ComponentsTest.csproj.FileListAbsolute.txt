@@ -1,0 +1,15 @@
+C:\Project\PersonnalLibrary\PersonnalLibrary.Components\PersonnalLibrary.ComponentsTest\bin\Debug\PersonnalLibrary.ComponentsTest.exe.config
+C:\Project\PersonnalLibrary\PersonnalLibrary.Components\PersonnalLibrary.ComponentsTest\bin\Debug\PersonnalLibrary.ComponentsTest.exe
+C:\Project\PersonnalLibrary\PersonnalLibrary.Components\PersonnalLibrary.ComponentsTest\bin\Debug\PersonnalLibrary.ComponentsTest.pdb
+C:\Project\PersonnalLibrary\PersonnalLibrary.Components\PersonnalLibrary.ComponentsTest\bin\Debug\PersonnalLibrary.Components.exe
+C:\Project\PersonnalLibrary\PersonnalLibrary.Components\PersonnalLibrary.ComponentsTest\bin\Debug\PersonnalLibrary.Components.pdb
+C:\Project\PersonnalLibrary\PersonnalLibrary.Components\PersonnalLibrary.ComponentsTest\obj\Debug\PersonnalLibrary.ComponentsTest.csprojResolveAssemblyReference.cache
+C:\Project\PersonnalLibrary\PersonnalLibrary.Components\PersonnalLibrary.ComponentsTest\obj\Debug\MainWindow.baml
+C:\Project\PersonnalLibrary\PersonnalLibrary.Components\PersonnalLibrary.ComponentsTest\obj\Debug\MainWindow.g.cs
+C:\Project\PersonnalLibrary\PersonnalLibrary.Components\PersonnalLibrary.ComponentsTest\obj\Debug\App.g.cs
+C:\Project\PersonnalLibrary\PersonnalLibrary.Components\PersonnalLibrary.ComponentsTest\obj\Debug\PersonnalLibrary.ComponentsTest_MarkupCompile.cache
+C:\Project\PersonnalLibrary\PersonnalLibrary.Components\PersonnalLibrary.ComponentsTest\obj\Debug\PersonnalLibrary.ComponentsTest.g.resources
+C:\Project\PersonnalLibrary\PersonnalLibrary.Components\PersonnalLibrary.ComponentsTest\obj\Debug\PersonnalLibrary.ComponentsTest.Properties.Resources.resources
+C:\Project\PersonnalLibrary\PersonnalLibrary.Components\PersonnalLibrary.ComponentsTest\obj\Debug\PersonnalLibrary.ComponentsTest.csproj.GenerateResource.Cache
+C:\Project\PersonnalLibrary\PersonnalLibrary.Components\PersonnalLibrary.ComponentsTest\obj\Debug\PersonnalLibrary.ComponentsTest.exe
+C:\Project\PersonnalLibrary\PersonnalLibrary.Components\PersonnalLibrary.ComponentsTest\obj\Debug\PersonnalLibrary.ComponentsTest.pdb

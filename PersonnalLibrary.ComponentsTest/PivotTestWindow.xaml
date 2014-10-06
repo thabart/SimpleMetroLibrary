@@ -1,0 +1,26 @@
+﻿<Window x:Class="PersonnalLibrary.Tests.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:components="http://thabart.be/xaml/presentation"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <components:PivotContainer SelectedIndex="2">
+            <components:PivotContainer.PivotItems>
+                <components:PivotItem Title="FirstPivot" NavigationShortCut="D1">
+                    <TextBox Width="400">coucou</TextBox>
+                </components:PivotItem>
+                <components:PivotItem Title="SecondPivot" NavigationShortCut="D2">
+                    <TextBlock Width="300" Text="Text"></TextBlock>
+                    <components:PivotItem.ContextButtons>
+                        <Button>ok</Button>
+                    </components:PivotItem.ContextButtons>
+                </components:PivotItem>
+                <components:PivotItem Title="ThirdPivot" NavigationShortCut="D3">
+                    <components:PivotItem.ContextButtons>
+                        <Button>ok</Button>
+                    </components:PivotItem.ContextButtons>
+                </components:PivotItem>
+            </components:PivotContainer.PivotItems>
+        </components:PivotContainer>
+    </Grid>
+</Window>

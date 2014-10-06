@@ -1,0 +1,11 @@
+﻿<Window x:Class="PersonnalLibrary.Tests.ListBoxMetroStyle"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ListBoxMetroStyle" Height="300" Width="300">
+    <Grid Height="200">
+        <ListBox>
+            <ListBoxItem>coucou</ListBoxItem>
+            <ListBoxItem>coucou 2</ListBoxItem>
+        </ListBox>
+    </Grid>
+</Window>

@@ -1,0 +1,12 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    
+    <ResourceDictionary.MergedDictionaries>
+
+        <!-- The theme used for the listbox -->
+        <ResourceDictionary Source="pack://application:,,,/PersonnalLibrary;component/Components/ListBox/Styles/ListBoxStyle.Generic.xaml" />
+        
+    </ResourceDictionary.MergedDictionaries>
+
+</ResourceDictionary>

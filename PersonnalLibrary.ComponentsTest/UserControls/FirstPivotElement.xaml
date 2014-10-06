@@ -1,0 +1,28 @@
+﻿<components:PivotItem x:Class="PersonnalLibrary.Tests.UserControls.FirstPivotElement"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             Title="First pivot"
+             xmlns:components="clr-namespace:PersonnalLibrary.Components;assembly=PersonnalLibrary"
+             d:DesignHeight="300" d:DesignWidth="300">
+    
+    <Grid>
+        <components:AutoCompleteBox Height="40" Width="300" />
+        <!--
+        <ListBox Width="200">
+            <ListBoxItem>azeaze</ListBoxItem>
+            <ListBoxItem>azeaze</ListBoxItem>
+            <ListBoxItem>azeaze</ListBoxItem>
+            <ListBoxItem>azeaze</ListBoxItem>
+        </ListBox>
+        -->
+    </Grid>
+    
+    <components:PivotItem.ContextButtons>
+        <Button Click="OpenEdgePanel">Open edge panel</Button>
+        <Button Click="OpenNewWindow">Open a new window</Button>
+    </components:PivotItem.ContextButtons>
+    
+</components:PivotItem>

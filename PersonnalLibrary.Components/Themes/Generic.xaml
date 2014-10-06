@@ -1,0 +1,24 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:PersonnalLibrary.Components">
+    
+    <ResourceDictionary.MergedDictionaries>
+        <!-- The theme used to display the tile -->
+        <ResourceDictionary Source="pack://application:,,,/PersonnalLibrary;component/Components/Tile/Styles/TextTileItemStyle.Generic.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/PersonnalLibrary;component/Components/Tile/Styles/ImageTileItemStyle.Generic.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/PersonnalLibrary;component/Components/Tile/Styles/TileStyle.Generic.xaml" />
+
+        <!-- The theme used to display the pivot -->
+        <ResourceDictionary Source="pack://application:,,,/PersonnalLibrary;component/Components/Pivot/Styles/PivotContainerStyle.Generic.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/PersonnalLibrary;component/Components/Pivot/Styles/PivotItemStyle.Generic.xaml" />
+
+        <!-- The theme used to display the window -->
+        <ResourceDictionary Source="pack://application:,,,/PersonnalLibrary;component/Components/MetroWindow/Styles/MetroWindowStyle.Generic.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/PersonnalLibrary;component/Components/MetroWindow/Styles/EdgePanelMetroWindowStyle.Generic.xaml" />
+
+        <!-- The theme used to display the autocompletebox -->
+        <ResourceDictionary Source="pack://application:,,,/PersonnalLibrary;component/Components/AutoCompleteBox/Styles/AutoCompleteBox.Generic.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+</ResourceDictionary>
