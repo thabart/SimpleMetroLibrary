@@ -56,9 +56,13 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Components\AutoCompleteBox\AutoCompleteBox.cs" />
+    <Compile Include="Components\AutoCompleteBox\ViewModels\AutoCompleteBoxViewModel.cs" />
     <Compile Include="Components\MetroWindow\EdgePanelMetroWindow.cs" />
     <Compile Include="Components\Pivot\Navigation\PivotController.cs" />
     <Compile Include="Components\Tile\OtherTileItem.cs" />
+    <Compile Include="Interaction\IInteractionRequest.cs" />
+    <Compile Include="Interaction\INotification.cs" />
+    <Compile Include="Interaction\Notification.cs" />
     <Compile Include="MetroApplication\MetroApplication.cs" />
     <Compile Include="Navigation\IPivotNavigationAware.cs" />
     <Compile Include="Navigation\PivotNavigationContext.cs" />

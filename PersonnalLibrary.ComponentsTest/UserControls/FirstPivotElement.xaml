@@ -3,26 +3,27 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+            xmlns:sys="clr-namespace:System;assembly=mscorlib"
              mc:Ignorable="d" 
              Title="First pivot"
              xmlns:components="clr-namespace:PersonnalLibrary.Components;assembly=PersonnalLibrary"
              d:DesignHeight="300" d:DesignWidth="300">
     
+    <components:PivotItem.Resources>
+        <x:Array Type="{x:Type sys:String}" x:Key="myArray">
+            <sys:String>first record</sys:String>
+            <sys:String>second record</sys:String>
+        </x:Array>    
+    </components:PivotItem.Resources>
+    
     <Grid>
-        <components:AutoCompleteBox Height="40" Width="300" />
-        <!--
-        <ListBox Width="200">
-            <ListBoxItem>azeaze</ListBoxItem>
-            <ListBoxItem>azeaze</ListBoxItem>
-            <ListBoxItem>azeaze</ListBoxItem>
-            <ListBoxItem>azeaze</ListBoxItem>
-        </ListBox>
-        -->
+        <components:AutoCompleteBox Height="40" Width="300" ItemsSource="{StaticResource myArray}"/>        
     </Grid>
     
     <components:PivotItem.ContextButtons>
         <Button Click="OpenEdgePanel">Open edge panel</Button>
         <Button Click="OpenNewWindow">Open a new window</Button>
+        <Button Click="Notify">Open a new window</Button>
     </components:PivotItem.ContextButtons>
     
 </components:PivotItem>

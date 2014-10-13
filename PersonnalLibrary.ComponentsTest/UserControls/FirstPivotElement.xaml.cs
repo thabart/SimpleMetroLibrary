@@ -1,4 +1,5 @@
 ﻿using PersonnalLibrary.Components;
+using PersonnalLibrary.Interaction;
 using PersonnalLibrary.Navigation;
 using PersonnalLibrary.Pivot.Navigation;
 
@@ -37,6 +38,11 @@ namespace PersonnalLibrary.Tests.UserControls
         private void OpenNewWindow(object sender, System.Windows.RoutedEventArgs e)
         {
             MetroApplication.ShowWindow("/PersonnalLibrary.Tests;component/UserControls/Tiles.xaml");
+        }
+
+        private void Notify(object sender, System.Windows.RoutedEventArgs e)
+        {
+            new Notification("test", "test");
         }
     }
 }

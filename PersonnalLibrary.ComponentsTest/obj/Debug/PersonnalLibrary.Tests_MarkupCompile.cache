@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Project\PersonnalLibrary\PersonnalLibrary.Components\PersonnalLibrary.ComponentsTest\obj\Debug\
+C:\Project\GitProject\metrolibrary\PersonnalLibrary.ComponentsTest\obj\Debug\
 PersonnalLibrary.Tests
 none
 false
 DEBUG;TRACE
-C:\Project\PersonnalLibrary\PersonnalLibrary.Components\PersonnalLibrary.ComponentsTest\App.xaml
+C:\Project\GitProject\metrolibrary\PersonnalLibrary.ComponentsTest\App.xaml
 91398689201
 
 12-827645471
-13-1226167320
+13840633818
 ListBoxMetroStyle.xaml;MetroTestWindow.xaml;PivotTestWindow.xaml;Themes\Generic.xaml;TileTestWindow.xaml;UserControls\EdgePanel.xaml;UserControls\FirstPivotElement.xaml;UserControls\OtherUserControl.xaml;UserControls\Tiles.xaml;
 
 False

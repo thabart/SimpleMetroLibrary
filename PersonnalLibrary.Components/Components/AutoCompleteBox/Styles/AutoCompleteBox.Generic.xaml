@@ -3,46 +3,53 @@
                     xmlns:local="clr-namespace:PersonnalLibrary.Components">
 
     <Style TargetType="{x:Type local:AutoCompleteBox}">
+        <Setter Property="FontSize" Value="14" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate>
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto" />
-                            <ColumnDefinition Width="*" />
-                        </Grid.ColumnDefinitions>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                        </Grid.RowDefinitions>
+                    <Canvas>
 
-                        <Border Name="Border"
+                        <Border Name="AutoCompleteTextBox"
                             BorderThickness="1"
                             BorderBrush="Gray"
                             Grid.Row="0"
                             Width="{TemplateBinding Width}"
                             Height="{TemplateBinding Height}">
                             <Grid>
-                                <StackPanel Orientation="Horizontal" x:Name="PART_ContentForLabels">
-                                </StackPanel>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
 
+                                <ItemsControl x:Name="PART_ContentForLabels" ItemsSource="{Binding SelectedLabelsSource}" Background="Red" Grid.Column="0">
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <StackPanel Orientation="Horizontal" />
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                </ItemsControl>
+
+                                
                                 <ScrollViewer Margin="0"
-                                          Grid.Column="2"
-                                          x:Name="PART_ContentHost" />
+                                          Grid.Column="1"
+                                          x:Name="PART_ContentHost"/>
+                                
+                                <TextBlock Text="{Binding WaterMarkValue}" Grid.Column="1" x:Name="PART_WaterMark"/>
+                                
                             </Grid>
                          </Border>
-
-                        <Grid  Grid.Row="1">
-                            <Popup Name="PART_ListItemsPopup" IsOpen="True">
-                                <ListBox>
-                                    <ListBoxItem>1</ListBoxItem>
-                                    <ListBoxItem>2</ListBoxItem>
-                                    <ListBoxItem>3</ListBoxItem>
-                                </ListBox>
-                            </Popup>
-                        </Grid>
                         
-                    </Grid>
+                        <Popup Name="PART_ListItemsPopup" IsOpen="False" Width="{TemplateBinding Width}" PlacementTarget="{Binding ElementName=AutoCompleteTextBox}" Placement="Bottom" AllowsTransparency="True">
+                            <ListBox ItemsSource="{Binding LabelsSource, Mode=TwoWay}"  x:Name="PART_LabelsList" SelectedItem="{Binding SelectedItem}">
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding}"/>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                        </Popup>
+                        
+                    </Canvas>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
