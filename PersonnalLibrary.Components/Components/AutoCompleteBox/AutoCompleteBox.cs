@@ -1,4 +1,5 @@
-﻿using PersonnalLibrary.Components.ViewModels;
+﻿using System;
+using PersonnalLibrary.Components.ViewModels;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -49,6 +50,8 @@ namespace PersonnalLibrary.Components
 
             this.DataContext = _viewModel;
 
+            _viewModel.PropertyChanged += OnViewModelPropertyChanged;
+
             this.KeyUp += OnAutoCompleteBoxKeyUp;
         }
 
@@ -69,8 +72,24 @@ namespace PersonnalLibrary.Components
             }
         }
 
+        public DataTemplate ItemTemplate
+        {
+            get { return (DataTemplate) this.GetValue(ItemTemplateProperty); }
+            set { this.SetValue(ItemTemplateProperty, value); }
+        }
+
         #endregion
-        
+
+        #region Dependency properties
+
+        public static readonly DependencyProperty ItemTemplateProperty = DependencyProperty.Register(
+            "ItemTemplate",
+            typeof (DataTemplate),
+            typeof (AutoCompleteBox),
+            new PropertyMetadata());
+
+        #endregion
+
         #region Public methods
 
         public override void OnApplyTemplate()
@@ -102,18 +121,32 @@ namespace PersonnalLibrary.Components
 
         private void OnAutoCompleteBoxKeyUp(object sender, KeyEventArgs e)
         {
-            string searchText = this.Text;
+            var searchText = this.Text;
             var lstRecords = from record in _viewModel.ItemsSource
-                         where record.ToString().ToUpper().StartsWith(searchText.ToUpper()) && 
-                         !_viewModel.SelectedLabelsSource.Any(sl => sl != null && sl.ToString().ToUpper().Equals(record.ToString().ToUpper()))
-                         select record;
+                             where record.ToString().ToUpper().StartsWith(searchText.ToUpper()) &&
+                             !_viewModel.SelectedLabelsSource.Any(sl => sl != null && sl.ToString().ToUpper().Equals(record.ToString().ToUpper()))
+                             select record;
 
-            if (lstRecords.Any())
+            var deleteLatestLabel = string.IsNullOrEmpty(searchText) && e.Key == Key.Back &&
+                                      _viewModel.SelectedLabelsSource.Any();
+            var addNewLabel = lstRecords.Any() && !string.IsNullOrEmpty(searchText);
+
+            if (deleteLatestLabel)
             {
-                _popup.IsOpen = true;
-                _viewModel.LabelsSource.Clear();
-                _viewModel.LabelsSource.AddRange(lstRecords.ToList());
+                _viewModel.SelectedLabelsSource.Remove(_viewModel.SelectedLabelsSource.Last());
+                return;
             }
+            
+            _viewModel.LabelsSource.Clear();
+            if (addNewLabel)
+            {
+                _popup.PopupAnimation = PopupAnimation.Slide;
+                _popup.IsOpen = true;
+                _viewModel.LabelsSource.AddRange(lstRecords.ToList());
+                return;
+            }
+
+            _popup.IsOpen = false;
         }
 
         private void PlacementTargetChanged(object sender, System.EventArgs e)
@@ -121,6 +154,23 @@ namespace PersonnalLibrary.Components
             var offset = _popup.HorizontalOffset;
             _popup.HorizontalOffset = offset + 1;
             _popup.HorizontalOffset = offset;
+        }
+
+        private void OnViewModelPropertyChanged(object sender, PropertyChangedEventArgs propertyChangedEventArgs)
+        {
+            if (propertyChangedEventArgs.PropertyName.Equals("SelectedItem"))
+            {
+                this.Text = string.Empty;
+                this.Focus();
+
+                ResetPopup();
+            }
+        }
+
+        private void ResetPopup()
+        {
+            _viewModel.LabelsSource.Clear();
+            _popup.IsOpen = false;
         }
 
         #endregion

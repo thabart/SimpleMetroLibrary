@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Windows;
 
 namespace PersonnalLibrary.Components.ViewModels
 {
@@ -48,7 +49,7 @@ namespace PersonnalLibrary.Components.ViewModels
             }
             set
             {
-                if (_selectedItem != value)
+                if (value != null)
                 {
                     _selectedItem = value;
                     LabelsSource.Remove(_selectedItem);

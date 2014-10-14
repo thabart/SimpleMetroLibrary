@@ -4,15 +4,15 @@
 winexe
 C#
 .cs
-C:\Project\GitProject\metrolibrary\PersonnalLibrary.Components\obj\Debug\
+C:\CustomProject\GitProject\metrolibrary\PersonnalLibrary.Components\obj\Debug\
 PersonnalLibrary
 none
 false
 DEBUG;TRACE
-C:\Project\GitProject\metrolibrary\PersonnalLibrary.Components\App.xaml
+C:\CustomProject\GitProject\metrolibrary\PersonnalLibrary.Components\App.xaml
 1383808085
 
-38-1428141491
+38-983954498
 141012385901
 Components\AutoCompleteBox\Styles\AutoCompleteBox.Generic.xaml;Components\Buttons\Styles\AppBarButtonStyle.Generic.xaml;Components\ListBox\Styles\ListBoxStyle.Generic.xaml;Components\MetroWindow\Styles\EdgePanelMetroWindowStyle.Generic.xaml;Components\MetroWindow\Styles\MetroWindowStyle.Generic.xaml;Components\Pivot\Styles\PivotItemStyle.Generic.xaml;Components\Pivot\Styles\PivotContainerStyle.Generic.xaml;Components\Tile\Styles\ImageTileItemStyle.Generic.xaml;Components\Tile\Styles\OtherTileItem.Generic.xaml;Components\Tile\Styles\TextTileItemStyle.Generic.xaml;Components\Tile\Styles\TileStyle.Generic.xaml;Styles\Generic.xaml;Themes\Generic.xaml;
 
