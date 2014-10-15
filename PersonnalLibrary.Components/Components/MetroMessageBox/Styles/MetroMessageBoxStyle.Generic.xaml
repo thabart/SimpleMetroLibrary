@@ -1,0 +1,31 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"                   
+                    xmlns:local="clr-namespace:PersonnalLibrary.Components">
+
+    <Style TargetType="{x:Type local:MetroMessageBox}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:MetroMessageBox}">
+                    <Grid Width="300" Background="Gray">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Border Grid.RowSpan="3" Background="Gray" BorderBrush="#3a3a3a" BorderThickness="1"/>
+                        <DockPanel  Width="300" Background="#3a3a3a" LastChildFill="True">
+                            <Image Source="/Images/Icons/attention.png" Width="15" Height="15" Margin="3"  DockPanel.Dock="Left"/>
+                            <TextBlock  Padding="3" Grid.Row="0" Background="#3a3a3a" Text="Information" Foreground="White" FontWeight="Bold"/>
+                        </DockPanel>
+                        <TextBlock Width="260" Grid.Row="1" Margin="5" TextWrapping="Wrap" Foreground="white" Text="Test"></TextBlock>
+
+
+                        <Button Width="40" Height="20" Margin="5" Grid.Row="2" x:Name="btnPopup" Content="Ok" />
+
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

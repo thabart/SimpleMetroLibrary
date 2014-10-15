@@ -2,6 +2,7 @@
 using PersonnalLibrary.Interaction;
 using PersonnalLibrary.Navigation;
 using PersonnalLibrary.Pivot.Navigation;
+using System.Windows;
 
 namespace PersonnalLibrary.Tests.UserControls
 {
@@ -28,7 +29,8 @@ namespace PersonnalLibrary.Tests.UserControls
         
         private void OpenEdgePanel(object sender, System.Windows.RoutedEventArgs e)
         {
-            var mainWindow = App.Current.MainWindow as MetroWindow;
+            var mainWindow = Application.Current.MainWindow as MetroWindow;
+
             if (mainWindow != null)
             {
                 mainWindow.DisplayViewInSplitPanel("/PersonnalLibrary.Tests;component/UserControls/EdgePanel.xaml", null);
@@ -42,7 +44,8 @@ namespace PersonnalLibrary.Tests.UserControls
 
         private void Notify(object sender, System.Windows.RoutedEventArgs e)
         {
-            new Notification("test", "test");
+            // new Notification("test", "test");
+            MetroApplication.DisplayMessageBox();
         }
     }
 }

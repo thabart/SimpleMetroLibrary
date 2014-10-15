@@ -1,15 +1,12 @@
-﻿using System;
+﻿using PersonnalLibrary.Components.Extensions;
 using PersonnalLibrary.Components.ViewModels;
-using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Diagnostics;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 using System.Windows.Input;
-using PersonnalLibrary.Components.Extensions;
 
 namespace PersonnalLibrary.Components
 {
@@ -34,6 +31,8 @@ namespace PersonnalLibrary.Components
         private Popup _popup;
 
         private ListBox _labelsList;
+
+        private string _previousTextValue;
 
         #endregion
 
@@ -128,16 +127,29 @@ namespace PersonnalLibrary.Components
                              select record;
 
             var deleteLatestLabel = string.IsNullOrEmpty(searchText) && e.Key == Key.Back &&
-                                      _viewModel.SelectedLabelsSource.Any();
+                                      _viewModel.SelectedLabelsSource.Any() && string.IsNullOrEmpty(_previousTextValue);
             var addNewLabel = lstRecords.Any() && !string.IsNullOrEmpty(searchText);
+            var automaticallyInsertWord = lstRecords.Count() == 1 && e.Key == Key.Tab;
+
+            _previousTextValue = searchText;
+
+            ResetPopup();
+            
+            if (automaticallyInsertWord)
+            {
+                _viewModel.SelectedLabelsSource.Add(lstRecords.First());
+                
+                ResetTextBox();
+
+                return;
+            }
 
             if (deleteLatestLabel)
             {
                 _viewModel.SelectedLabelsSource.Remove(_viewModel.SelectedLabelsSource.Last());
                 return;
             }
-            
-            _viewModel.LabelsSource.Clear();
+
             if (addNewLabel)
             {
                 _popup.PopupAnimation = PopupAnimation.Slide;
@@ -145,8 +157,6 @@ namespace PersonnalLibrary.Components
                 _viewModel.LabelsSource.AddRange(lstRecords.ToList());
                 return;
             }
-
-            _popup.IsOpen = false;
         }
 
         private void PlacementTargetChanged(object sender, System.EventArgs e)
@@ -160,11 +170,16 @@ namespace PersonnalLibrary.Components
         {
             if (propertyChangedEventArgs.PropertyName.Equals("SelectedItem"))
             {
-                this.Text = string.Empty;
-                this.Focus();
+                ResetTextBox();
 
                 ResetPopup();
             }
+        }
+
+        private void ResetTextBox()
+        {
+            this.Text = string.Empty;
+            this.Focus();
         }
 
         private void ResetPopup()

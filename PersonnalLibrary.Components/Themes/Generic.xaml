@@ -19,6 +19,9 @@
 
         <!-- The theme used to display the autocompletebox -->
         <ResourceDictionary Source="pack://application:,,,/PersonnalLibrary;component/Components/AutoCompleteBox/Styles/AutoCompleteBox.Generic.xaml" />
+        
+        <!-- The theme used to display notification popup -->
+        <ResourceDictionary Source="pack://application:,,,/PersonnalLibrary;component/Components/MetroMessageBox/Styles/MetroMessageBoxStyle.Generic.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
 </ResourceDictionary>

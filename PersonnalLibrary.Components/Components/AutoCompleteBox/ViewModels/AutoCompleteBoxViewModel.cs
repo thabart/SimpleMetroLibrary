@@ -1,7 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using PersonnalLibrary.Common;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Windows;
+using System.Diagnostics;
+using System.Windows.Input;
 
 namespace PersonnalLibrary.Components.ViewModels
 {
@@ -29,11 +31,15 @@ namespace PersonnalLibrary.Components.ViewModels
 
             LabelsSource = new ObservableCollection<object>();
             SelectedLabelsSource = new ObservableCollection<object>();
+
+            DeleteLabelCommand = new DelegateCommand(OnDeleteLabelCommandExecuted);
         }
 
         #endregion
 
         #region Properties
+
+        public ICommand DeleteLabelCommand { get; set; }
 
         public IEnumerable<object> ItemsSource { get; set; }
 
@@ -87,6 +93,11 @@ namespace PersonnalLibrary.Components.ViewModels
             }
 
             PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        private void OnDeleteLabelCommandExecuted(object parameter)
+        {
+            SelectedLabelsSource.Remove(parameter);
         }
 
         #endregion

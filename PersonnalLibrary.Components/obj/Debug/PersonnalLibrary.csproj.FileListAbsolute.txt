@@ -24,15 +24,11 @@ C:\Project\PersonnalLibrary\PersonnalLibrary.Components\PersonnalLibrary.Compone
 C:\Project\PersonnalLibrary\PersonnalLibrary.Components\PersonnalLibrary.Components\obj\Debug\Styles\Generic.baml
 C:\Project\PersonnalLibrary\PersonnalLibrary.Components\PersonnalLibrary.Components\obj\Debug\Components\ListBox\Styles\ListBoxStyle.Generic.baml
 C:\Project\PersonnalLibrary\PersonnalLibrary.Components\PersonnalLibrary.Components\obj\Debug\Components\AutoCompleteBox\Styles\AutoCompleteBox.Generic.baml
-C:\Project\GitProject\metrolibrary\PersonnalLibrary.Components\bin\Debug\PersonnalLibrary.exe.config
-C:\Project\GitProject\metrolibrary\PersonnalLibrary.Components\bin\Debug\PersonnalLibrary.exe
 C:\Project\GitProject\metrolibrary\PersonnalLibrary.Components\bin\Debug\PersonnalLibrary.pdb
 C:\Project\GitProject\metrolibrary\PersonnalLibrary.Components\obj\Debug\Components\Buttons\Styles\AppBarButtonStyle.Generic.baml
 C:\Project\GitProject\metrolibrary\PersonnalLibrary.Components\obj\Debug\Components\ListBox\Styles\ListBoxStyle.Generic.baml
 C:\Project\GitProject\metrolibrary\PersonnalLibrary.Components\obj\Debug\Components\Tile\Styles\OtherTileItem.Generic.baml
 C:\Project\GitProject\metrolibrary\PersonnalLibrary.Components\obj\Debug\Styles\Generic.baml
-C:\Project\GitProject\metrolibrary\PersonnalLibrary.Components\obj\Debug\App.baml
-C:\Project\GitProject\metrolibrary\PersonnalLibrary.Components\obj\Debug\App.g.cs
 C:\Project\GitProject\metrolibrary\PersonnalLibrary.Components\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Project\GitProject\metrolibrary\PersonnalLibrary.Components\obj\Debug\PersonnalLibrary_MarkupCompile.cache
 C:\Project\GitProject\metrolibrary\PersonnalLibrary.Components\obj\Debug\PersonnalLibrary_MarkupCompile.lref
@@ -48,9 +44,7 @@ C:\Project\GitProject\metrolibrary\PersonnalLibrary.Components\obj\Debug\Themes\
 C:\Project\GitProject\metrolibrary\PersonnalLibrary.Components\obj\Debug\PersonnalLibrary.g.resources
 C:\Project\GitProject\metrolibrary\PersonnalLibrary.Components\obj\Debug\PersonnalLibrary.Properties.Resources.resources
 C:\Project\GitProject\metrolibrary\PersonnalLibrary.Components\obj\Debug\PersonnalLibrary.csproj.GenerateResource.Cache
-C:\Project\GitProject\metrolibrary\PersonnalLibrary.Components\obj\Debug\PersonnalLibrary.exe
 C:\Project\GitProject\metrolibrary\PersonnalLibrary.Components\obj\Debug\PersonnalLibrary.pdb
-C:\Project\GitProject\metrolibrary\PersonnalLibrary.Components\obj\Debug\PersonnalLibrary.csprojResolveAssemblyReference.cache
 C:\CustomProject\GitProject\metrolibrary\PersonnalLibrary.Components\bin\Debug\PersonnalLibrary.exe.config
 C:\CustomProject\GitProject\metrolibrary\PersonnalLibrary.Components\bin\Debug\PersonnalLibrary.exe
 C:\CustomProject\GitProject\metrolibrary\PersonnalLibrary.Components\bin\Debug\PersonnalLibrary.pdb
@@ -78,3 +72,8 @@ C:\CustomProject\GitProject\metrolibrary\PersonnalLibrary.Components\obj\Debug\P
 C:\CustomProject\GitProject\metrolibrary\PersonnalLibrary.Components\obj\Debug\PersonnalLibrary.csproj.GenerateResource.Cache
 C:\CustomProject\GitProject\metrolibrary\PersonnalLibrary.Components\obj\Debug\PersonnalLibrary.exe
 C:\CustomProject\GitProject\metrolibrary\PersonnalLibrary.Components\obj\Debug\PersonnalLibrary.pdb
+C:\Project\GitProject\metrolibrary\PersonnalLibrary.Components\obj\Debug\Components\Common\Font.Generic.baml
+C:\Project\GitProject\metrolibrary\PersonnalLibrary.Components\bin\Debug\PersonnalLibrary.dll.config
+C:\Project\GitProject\metrolibrary\PersonnalLibrary.Components\bin\Debug\PersonnalLibrary.dll
+C:\Project\GitProject\metrolibrary\PersonnalLibrary.Components\obj\Debug\PersonnalLibrary.dll
+C:\Project\GitProject\metrolibrary\PersonnalLibrary.Components\obj\Debug\Components\MetroMessageBox\Styles\MetroMessageBoxStyle.Generic.baml

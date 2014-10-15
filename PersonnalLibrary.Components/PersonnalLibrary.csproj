@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{8C969AAD-51E2-415F-BF70-50E050C5342F}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PersonnalLibrary</RootNamespace>
     <AssemblyName>PersonnalLibrary</AssemblyName>
@@ -33,6 +33,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -51,12 +54,9 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <ApplicationDefinition Include="App.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </ApplicationDefinition>
     <Compile Include="Components\AutoCompleteBox\AutoCompleteBox.cs" />
     <Compile Include="Components\AutoCompleteBox\ViewModels\AutoCompleteBoxViewModel.cs" />
+    <Compile Include="Components\MetroMessageBox\MetroMessageBox.cs" />
     <Compile Include="Components\MetroWindow\EdgePanelMetroWindow.cs" />
     <Compile Include="Components\Pivot\Navigation\PivotController.cs" />
     <Compile Include="Components\Tile\OtherTileItem.cs" />
@@ -74,7 +74,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Components\Common\Font.Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Components\ListBox\Styles\ListBoxStyle.Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Components\MetroMessageBox\Styles\MetroMessageBoxStyle.Generic.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -110,10 +118,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Compile Include="App.xaml.cs">
-      <DependentUpon>App.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Components\MetroWindow\MetroWindow.cs" />
     <Compile Include="Components\Pivot\PivotItem.cs" />
     <Compile Include="Common\DelegateCommand.cs" />
@@ -173,7 +177,7 @@
     <Folder Include="Components\TreeView\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\ubuntu_icon.png" />
+    <Resource Include="Fonts\Seguisym.ttf" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
