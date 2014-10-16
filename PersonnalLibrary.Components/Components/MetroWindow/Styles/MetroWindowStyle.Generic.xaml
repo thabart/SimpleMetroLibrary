@@ -109,13 +109,13 @@
                         <Grid>
                             <Grid Background="{TemplateBinding Background}">
 
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="Auto"/>
-                                        <RowDefinition Height="*"/>
-                                    </Grid.RowDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
 
-                                    <!-- The navigation bar -->
-                                    <ContentControl Grid.Row="0" x:Name="PART_ContentControlMoveRectangle">
+                                <!-- The navigation bar -->
+                                <ContentControl Grid.Row="0" x:Name="PART_ContentControlMoveRectangle">
                                         <Grid>
                                             <Rectangle Grid.Row="0" x:Name="PART_MoveRectangle" Style="{StaticResource ResourceKey=MetroWindowRectangleStyle}" />
                                             <StackPanel Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Right" Height="25">
@@ -127,10 +127,10 @@
                                         </Grid>
                                     </ContentControl>
 
-                                    <!-- The body -->
-                                    <Grid Grid.Row="1" Grid.IsSharedSizeScope="True">
-
-                                        <Grid>
+                                <!-- The body -->
+                                <Grid Grid.Row="1" Grid.IsSharedSizeScope="True" x:Name="PART_BodyWindow" Grid.ZIndex="1">
+                                
+                                    <Grid>
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition />
                                                 <ColumnDefinition />
@@ -141,9 +141,9 @@
                                                 <ContentPresenter />
                                             </Grid>
                                         </Grid>
-
-                                        <!-- The edge panel -->
-                                        <Grid Visibility="Collapsed" x:Name="PART_SplitWindow">
+                                
+                                    <!-- The edge panel -->
+                                    <Grid Visibility="Collapsed" x:Name="PART_SplitWindow">
 
                                             <Grid.RenderTransform>
                                                 <TranslateTransform x:Name="SplitWindowTranslateTransform" />
@@ -159,8 +159,25 @@
 
                                             <GridSplitter Grid.Column="1" Style="{StaticResource WindowSplitter}" HorizontalAlignment="Left" />
                                         </Grid>
+                                
+                                </Grid>
 
+                                <!-- To display a popup in the window -->
+                                <Grid x:Name="PART_AlertWindow" Grid.ZIndex="2" Grid.Row="1" Visibility="Collapsed">
+                                    <Grid.Background>
+                                        <SolidColorBrush Color="Black" Opacity="0.5" />
+                                    </Grid.Background>
+                                    
+                                    <Grid VerticalAlignment="Center" Background="White">
+                                        <Border BorderBrush="Gray" BorderThickness="1">
+                                            <Grid HorizontalAlignment="Center">
+                                                <TextBlock>Popup</TextBlock>
+                                            </Grid>
+                                        </Border>
                                     </Grid>
+                                    
+                                </Grid>
+
                             </Grid>
                             <Grid x:Name="PART_ResizableGrid" Grid.ZIndex="3">
                                 <Rectangle

@@ -95,7 +95,7 @@ namespace PersonnalLibrary.Components
         {
             _contentForLabel = (ItemsControl)this.Template.FindName("PART_ContentForLabels", this);
             _waterMarkTextBlock = (TextBlock)this.Template.FindName("PART_WaterMark", this);
-            _contentHost = (ScrollViewer)this.Template.FindName("PART_ContentHost", this);
+            // _contentHost = (ScrollViewer)this.Template.FindName("PART_ContentHost", this);
             _popup = (Popup)this.Template.FindName("PART_ListItemsPopup", this);
             _labelsList = (ListBox)this.Template.FindName("PART_LabelsList", this);
 

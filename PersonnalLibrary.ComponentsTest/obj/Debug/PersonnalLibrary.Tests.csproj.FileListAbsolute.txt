@@ -68,7 +68,6 @@ C:\CustomProject\GitProject\metrolibrary\PersonnalLibrary.ComponentsTest\obj\Deb
 C:\CustomProject\GitProject\metrolibrary\PersonnalLibrary.ComponentsTest\obj\Debug\PersonnalLibrary.Tests.pdb
 C:\CustomProject\GitProject\metrolibrary\PersonnalLibrary.ComponentsTest\bin\Debug\PersonnalLibrary.Tests.exe
 C:\CustomProject\GitProject\metrolibrary\PersonnalLibrary.ComponentsTest\bin\Debug\PersonnalLibrary.Tests.pdb
-C:\CustomProject\GitProject\metrolibrary\PersonnalLibrary.ComponentsTest\bin\Debug\PersonnalLibrary.exe
 C:\CustomProject\GitProject\metrolibrary\PersonnalLibrary.ComponentsTest\bin\Debug\PersonnalLibrary.pdb
 C:\CustomProject\GitProject\metrolibrary\PersonnalLibrary.ComponentsTest\obj\Debug\PersonnalLibrary.Tests.csprojResolveAssemblyReference.cache
 C:\CustomProject\GitProject\metrolibrary\PersonnalLibrary.ComponentsTest\obj\Debug\ListBoxMetroStyle.baml
@@ -97,3 +96,4 @@ C:\CustomProject\GitProject\metrolibrary\PersonnalLibrary.ComponentsTest\obj\Deb
 C:\CustomProject\GitProject\metrolibrary\PersonnalLibrary.ComponentsTest\obj\Debug\PersonnalLibrary.Tests.Properties.Resources.resources
 C:\CustomProject\GitProject\metrolibrary\PersonnalLibrary.ComponentsTest\obj\Debug\PersonnalLibrary.Tests.csproj.GenerateResource.Cache
 C:\Project\GitProject\metrolibrary\PersonnalLibrary.ComponentsTest\bin\Debug\PersonnalLibrary.dll
+C:\CustomProject\GitProject\metrolibrary\PersonnalLibrary.ComponentsTest\bin\Debug\PersonnalLibrary.dll

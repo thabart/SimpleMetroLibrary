@@ -18,6 +18,7 @@ namespace PersonnalLibrary.Components
     [TemplatePart(Name = "PART_SplitWindowContent", Type = typeof(Grid))]
     [TemplatePart(Name = "PART_ResizableGrid", Type = typeof(Grid))]
     [TemplatePart(Name = "PART_ContentControlMoveRectangle", Type = typeof(ContentControl))]
+    [TemplatePart(Name = "PART_AlertWindow", Type = typeof(Grid))]
     public class MetroWindow : Window
     {
         #region Fields
@@ -33,6 +34,8 @@ namespace PersonnalLibrary.Components
         private bool _isEdgePanelOpen;
 
         private FrameworkElement _loadedEdgePanel;
+
+        private Grid _alterWindow;
 
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
         private static extern IntPtr SendMessage(IntPtr hWnd, UInt32 msg, IntPtr wParam, IntPtr lParam);
@@ -106,6 +109,11 @@ namespace PersonnalLibrary.Components
             }
         }
 
+        public void DisplayPopup()
+        {
+            _alterWindow.Visibility = Visibility.Visible;
+        }
+
         public void DisplayMetroWindow(string url)
         {
 
@@ -122,6 +130,7 @@ namespace PersonnalLibrary.Components
             _splitWindow = (Grid)this.Template.FindName("PART_SplitWindow", this);
             _splitWindowContent = (Grid)this.Template.FindName("PART_SplitWindowContent", this);
             _splitWindowTranslateTransform = (TranslateTransform)this.Template.FindName("SplitWindowTranslateTransform", this);
+            _alterWindow = (Grid)this.Template.FindName("PART_AlertWindow", this);
 
             var resizeGrid = (Grid)this.Template.FindName("PART_ResizableGrid", this);
             foreach (var element in resizeGrid.Children)

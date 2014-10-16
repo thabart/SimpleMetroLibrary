@@ -10,8 +10,6 @@ namespace PersonnalLibrary
     {
         public static void ShowWindow(string path)
         {
-            var fonts = Fonts.GetFontFamilies(new Uri("pack://application:,,,/PersonnalLibrary;component/Fonts/#"));
-
             var uri = new Uri(path, UriKind.Relative);
             var component = (FrameworkElement)Application.LoadComponent(uri);
             var window = new MetroWindow();
@@ -21,7 +19,9 @@ namespace PersonnalLibrary
 
         public static void DisplayMessageBox()
         {
-
+            var window = (MetroWindow)Application.Current.MainWindow;
+            window.DisplayPopup();
+            /*
             Action<object, EventArgs, Popup> placementTargetChanged = (sender, e, p) =>
             {
                 var offset = p.HorizontalOffset;
@@ -43,6 +43,7 @@ namespace PersonnalLibrary
                 window.LocationChanged += (s, e) => placementTargetChanged(s, e, popup);
                 window.SizeChanged += (s, e) => placementTargetChanged(s, e, popup);
             }
+            */
         }
     }
 }

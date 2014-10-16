@@ -14,11 +14,16 @@
             <sys:String>first record</sys:String>
             <sys:String>second record</sys:String>
             <sys:String>second record2</sys:String>
+            <sys:String>T</sys:String>
+            <sys:String>A</sys:String>
+            <sys:String>B</sys:String>
+            <sys:String>CC</sys:String>
+            <sys:String>EE</sys:String>
         </x:Array>    
     </components:PivotItem.Resources>
     
     <Grid>
-        <components:AutoCompleteBox Height="40" Width="300" ItemsSource="{StaticResource myArray}"/>        
+        <components:AutoCompleteBox Width="200" ItemsSource="{StaticResource myArray}"/>        
     </Grid>
     
     <components:PivotItem.ContextButtons>

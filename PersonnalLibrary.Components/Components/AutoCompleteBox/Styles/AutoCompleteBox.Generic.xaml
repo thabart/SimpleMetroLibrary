@@ -36,17 +36,15 @@
     
     <Style TargetType="{x:Type local:AutoCompleteBox}">
         <Setter Property="FontSize" Value="14" />
+        <Setter Property="VerticalAlignment" Value="Stretch" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate>
-                    <Canvas>
+                    <Grid Height="Auto">
 
                         <Border Name="AutoCompleteTextBox"
                             BorderThickness="1"
-                            BorderBrush="Gray"
-                            Grid.Row="0"
-                            Width="{TemplateBinding Width}"
-                            Height="{TemplateBinding Height}">
+                            BorderBrush="Gray">
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto" />
@@ -79,8 +77,8 @@
                                 </ListBox.ItemTemplate>
                             </ListBox>
                         </Popup>
-                        
-                    </Canvas>
+
+                    </Grid>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
